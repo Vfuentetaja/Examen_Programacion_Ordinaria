@@ -9,7 +9,7 @@ package ejercicio_2;
  *
  * @author DAW
  */
-public class NewMain {
+public class ejercicio_2 {
 
     /**
      * @param args the command line arguments
