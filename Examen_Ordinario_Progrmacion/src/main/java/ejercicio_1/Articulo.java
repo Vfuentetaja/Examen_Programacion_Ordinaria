@@ -30,7 +30,7 @@ public class Articulo {
         this.precio_compra_proveedor = precio_compra_proveedor;
         this.stock = stock;
     }
-
+    //funcion para añadir un nuevo articulo a la lista de articulos
     public void AñadirNuevoArtriculo(Articulo nuevo) {
         boolean creado = true;
         for (Articulo art_auxiliar : Lista_articulos) {
@@ -45,7 +45,7 @@ public class Articulo {
     }
     
     
-
+    //funcion para mostrar los articulos
     public void MostrarArticulos() {
 
         for (Articulo art_auxiliar : Lista_articulos) {
@@ -53,7 +53,7 @@ public class Articulo {
         }
 
     }
-
+    
     public ArrayList<Articulo> getLista_articulos() {
         return Lista_articulos;
     }
@@ -61,7 +61,7 @@ public class Articulo {
     public void setLista_articulos(ArrayList<Articulo> Lista_articulos) {
         this.Lista_articulos = Lista_articulos;
     }
-
+    //funcion de venta de un articulo
     public void ventaClienteArticulo() {
         System.out.println("dime lo que quieres vender: ");
         int identificador = entrada.nextInt();
@@ -82,7 +82,7 @@ public class Articulo {
         String respuesta = entrada.next();
 
     }
-
+    //funcion de compra de un articulo
     public void compraProveedorArticulo() {
         System.out.println("dime lo que quieres comprar: ");
         int ide = entrada.nextInt();
@@ -143,7 +143,7 @@ public class Articulo {
     public void setStock(int stock) {
         this.stock = stock;
     }
-
+    //funcion para mostrar todos los datos de un articulo
     public String InfoArticulo() {
         return "su ide es: " + this.ide + " su nombre es: " + this.nombre + " sus precios son: " + this.precio_venta_cliente + " " + precio_compra_proveedor + " su iva es: " + this.iva + " su stock es de: " + this.stock;
 

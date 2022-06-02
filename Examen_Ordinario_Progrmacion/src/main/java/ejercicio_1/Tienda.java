@@ -34,33 +34,36 @@ public class Tienda {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-
+        //array list de la tienda
         ArrayList<Articulo> tienda = new ArrayList<>();
-
+        //creo todos los articulos que quiero
         Articulo a1 = new Articulo(0, "caja", 24, 15, 3);
         Articulo a2 = new Articulo(1, "sombrero", 9, 5, 13);
         Articulo a3 = new Articulo(2, "cinturon", 13, 9, 22);
         Articulo a4 = new Articulo(3, "pantalon", 45, 22, 15);
-
+        //lo añado a la tienda
         tienda.add(a1);
         tienda.add(a2);
         tienda.add(a3);
         tienda.add(a4);
-
+        //se va a la funcion de añadir articulo a la lista de articulos
         a1.AñadirNuevoArtriculo(a1);
         a1.AñadirNuevoArtriculo(a2);
         a1.AñadirNuevoArtriculo(a3);
         a1.AñadirNuevoArtriculo(a4);
-
+        
         do {
             switch (DimeOpcion()) {
                 case 1:
+                    //funcion mostrar articulos
                     a1.MostrarArticulos();
                     break;
                 case 2:
+                    //funcion vender
                     a1.ventaClienteArticulo();
                     break;
                 case 3:
+                    //funcion comprar
                     a1.compraProveedorArticulo();
                     break;
                 case 4:
@@ -73,6 +76,7 @@ public class Tienda {
                     int opcion = entrada.nextInt();
                     switch (opcion) {
                         case 1:
+                            //creamos un nuevo objeto a partir de los datos que le damos
                             System.out.println("dime su codigo: ");
                             int codigo = entrada.nextInt();
                             System.out.println("dime su nombre: ");
@@ -89,12 +93,12 @@ public class Tienda {
                             a5.AñadirNuevoArtriculo(a5);
                             break;
                         case 2:
-
+                            //le pedimos el ide del articulo al que queremos editar
                             System.out.println("dime el ide del articulo al que quieres editar: ");
                             int x = entrada.nextInt();
                             
                             if (x == 0) {
-
+                                //le pedimos que quiere editar
                                 System.out.println("que quieres cambiar? ");
                                 String nom = entrada.next();
 
@@ -200,6 +204,7 @@ public class Tienda {
                             break;
 
                         case 3:
+                            //eliminamos un articulo que introducimos por teclado
                             System.out.println("que articulo quieres eliminar? ");
                             String articulo = entrada.nextLine();
                             tienda.remove(articulo);
